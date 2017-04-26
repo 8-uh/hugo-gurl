@@ -1,0 +1,37 @@
+pre,  code.hljs {
+  padding: 0px 20px;
+  color: #ECEFF4;
+  background-color: #2E3440;
+}
+
+.hljs-keyword {
+  color: #82A2C0;
+}
+
+.hljs-string {
+  color: #A4BD8E;
+}
+
+.hljs-function {
+  color: #EACA8F;
+}
+
+.hljs-title {
+  color: #8AC0CF;
+}
+
+.hljs-params {
+  color: #ECEFF4;
+}
+
+.hljs-comment {
+  color: #4C5669;
+}
+
+.hljs-substr {
+  color: #ECEFF4;
+}
+
+.hljs-attr {
+  color: #90BCBB;
+}
