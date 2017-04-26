@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://8-uh.github.io/"
+baseurl = "https://8-uh.github.io/"
 # HTML Language Code Reference, such as en, zh-cn
 languageCode = "en"
 title = "love-notes"
