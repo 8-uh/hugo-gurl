@@ -1,9 +1,9 @@
 +++
 categories = ["javascript","articles"]
 date = "2017-05-02T02:43:06-05:00"
-description = ""
 tags = ["javascript","es6",""]
 title = "The Unbearable Lightness of Using `const`"
+description = "These consistent cancerous and confusing cockups concerning `const` can conservatively be canceled via the coaxing of a code cacique"
 +++
 
 It has recently come to my attention that there is some confusion in the javascript community as to the usage of `const`. If you'll allow me a few minutes and artistic license to butcher the -actual- underpinnings of memory management and registration in the V8 engine, I'll try to unravel, in as clear and plain language as possible, the mysteries of one of our newest keywords.
