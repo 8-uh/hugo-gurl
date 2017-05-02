@@ -1,6 +1,4 @@
 
-console.log('blerrrrrg')
-
 document.addEventListener("DOMContentLoaded", function() {
   const pres = document.getElementsByTagName('pre')
   for(let i = 0; i < pres.length; i++) {

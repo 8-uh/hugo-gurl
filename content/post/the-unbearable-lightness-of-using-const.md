@@ -289,7 +289,7 @@ If you'd still like to eviscerate me in the comments, please at least show you'v
 ## And... we're (h|b)ack
 Thank you for indulging me that brief interlude... Upon re-reading everything up to this point, I realize I haven't answered the question that should be in your head right now: **What does this have to do with `const`?**
 
-In our imaginary language, **Ay**, assigning a new `ExamGrade` instance to a variable actually points the variable to a new memory location that stores the individual memory locations for each property. In JavaScript, assigning an Object (that is, assigning -almost- anything) to a variable does the same thing. When you use either `var` or `let` (which is another article altogether), to store an Object, you are telling the interpreter that it's ok to assign a different memory location to the defined variable at a later time. When you use `const` however, the interpreted understands that once the memory address for that object is assigned, it is not allowed to assign it a different address ever again. However, this instruction does not apply to an object's properties.
+In our imaginary language, **Ay**, assigning a new `ExamGrade` instance to a variable actually points the variable to a new memory location that stores the individual memory locations for each property. In JavaScript, assigning an Object (that is, assigning -almost- anything) to a variable does the same thing. When you use either `var` or `let` (which is another article altogether), to store an Object, you are telling the interpreter that it's ok to assign a different memory location to the defined variable at a later time. When you use `const` however, the interpreter understands that once the memory address for that object is assigned, it is not allowed to assign it a different address ever again. However, this instruction does not apply to an object's properties.
 
 For instance, the `ExamRecord` class in JavaScript:
 ```javascript
@@ -367,10 +367,14 @@ Well, no more.
 
 Using `const` you can help self-document your code by setting forward the **intention** that the value of the defined variable will not change before it is no longer needed. This isn't just a promise to the run-time, but also to other developers (and, even your future self).
 
-This, however, begs the question:
 
-## When Should I Use `const`?
-I'm glad you asked... In my opinion `const` should be used only when the value of the variable will not change, at all, between the times it is declared and goes out of scope. If you plan on changing the value of an object's property, don't use `const`. While this is a syntactically viable place to use `const`, it fails to convey the correct intention. In fact, it straight up lies to whomever is reviewing the code. On the other hand, `const` is great when used in loops or iterator functions to hold a temporary variable. I also use it to deconstruct built-ins, create simple composable functions or mathematic constants:
+
+## Tangent: When Should I Use `const`?
+<strike>I'm glad you asked... In my opinion `const` should be used only when the value of the variable will not change, at all, between the times it is declared and goes out of scope. If you plan on changing the value of an object's property, don't use `const`. While this is a syntactically viable place to use `const`, it fails to convey the correct intention. In fact, it straight up lies to whomever is reviewing the code.</strike>
+#### *Update 05.02.17 @ 11:17:*
+*I posted this article on reddit and received an [incredible comment from /u/Retsam19](https://www.reddit.com/r/javascript/comments/68t71q/the_unbearable_lightness_of_using_const/dh15kp6/). The conversation caused me to look back at some of my recent code as well as that of community leaders writing modern js and ultimately realize that combination of murky writing and "brain faster than fingers" led to a combination of poor communication of ideas on my part, and down right ignoring others. The edit below incorporates Retsam19's suggestions and my rework of the text*
+
+ This is more a question of stylistics than of proper code authoring. Because of this, everyone will have a differing opinion. However, the most common modern JavaScript linter,`eslint`, has a rule (`prefer-const`) that will attempt to enforce the usage of `const` over `var` or `let`. My personal feeling on the matter, though, is: Use `const` everywhere that you can and that it makes since to; allow the usage of `let` to signify that a variable defined as such will -absolutely- change; use `const` to help manage side-effects (we'll talk about those later); use it in loops or iterator functions to hold a temporary variable. I also use it to deconstruct built-ins, create simple composable functions, or to store mathematic constants:
 
 ```javascript
 // deconstructions
@@ -389,7 +393,13 @@ add5(2)
 // -> 7
 ```
 
+##### *Addendum: 05.02.17 @ 11:58: Decided to write a proper conclusion...*
+## The Wrap-Up
+To those of you who are coming to javascript as your first language in the middle of this transitionary period between old and new code styles, I hope that somewhere in this rambling mess of mid-night mutterings, you found an answer to a question that has been vexing you. Or, even better, that you found new questions to ask.
 
+For those of you coming from a different language, I hope I was able to bridge the gap of knowledge that is so very often lost between the two disciplines.
+
+And finally, for those of you who find this explanation simplistic and elementary, I encourage you to share. Leave a comment, link your blog, post your youtube channel, send me an email, author a white paper, write a medium article. Just, don't do nothing.
 
 
 -- A. Lovecraft
