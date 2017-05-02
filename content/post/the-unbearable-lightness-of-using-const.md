@@ -6,7 +6,7 @@ tags = ["javascript","es6",""]
 title = "The Unbearable Lightness of Using `const`"
 +++
 
-It has recently come to my attention that there is some confusion in the javascript community as to the usage of `const`. If you'll allow me a few minutes and artistic license to butcher the -actual- underpinnings of memory management and registering in the V8 engine, I'll try to unravel, in as clear and plain language as possible, the mysteries of one of our newest keywords.
+It has recently come to my attention that there is some confusion in the javascript community as to the usage of `const`. If you'll allow me a few minutes and artistic license to butcher the -actual- underpinnings of memory management and registration in the V8 engine, I'll try to unravel, in as clear and plain language as possible, the mysteries of one of our newest keywords.
 
 ## Ada's Rule
 
@@ -136,7 +136,7 @@ Luckily for this article, the **Ay** language auto-magically assigns the correct
 
 ```C
 ExamRecord er = new ExamRecord(1430, 86.3, 'B');
-er.dump()
+er.dump();
 ```
 would produce:
 
@@ -183,7 +183,7 @@ Once, we've set the properties for an `ExamGrade` and saved it (via some other m
 
 ```C
 ExamRecord er = new ExamRecord(1430, 86.3, 'B');
-saveExamRecord(er)
+saveExamRecord(er);
 er = new ExamRecord(1215, 71.8, 'C');
 ```
 
