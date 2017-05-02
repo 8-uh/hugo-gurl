@@ -359,7 +359,7 @@ When an array is asked to change the contents of an element at a given index, it
 
 ## Constraining Code
 
-There's... one other side-effect of `const` that needs to be mentioned. The Human Side-Effect. As developers, on average, we spend most of our day not -writing- code, but **reading** it. For those developers who use **Ay** on the daily, their code is intrinsically easier to understand an application's data flow at a glance because they have keywords to identify data types i.e.: `int`, `float`, `char`, `bool`. This makes it easier for them to find bugs in their code because the language, by design, imposes constraints on the type of data they can assign to a given variable, and therefor provides the developers with logical and visual (via syntax highlighting) context clues.
+There's... one other side-effect of `const` that needs to be mentioned. The Human Side-Effect. As developers, on average, we spend most of our day not -writing- code, but **reading** it. For those developers who use **Ay** on the daily, it is intrinsically easier to understand an application's data flow at a glance because they have keywords to identify data types i.e.: `int`, `float`, `char`, `bool`. This makes it easier for the developers to find bugs in their code because the language, by design, imposes constraints on the type of data they can assign to a given variable, and therefor provides the developers with logical and visual (via syntax highlighting) context clues.
 
 JavaScript engineers, on the other hand, have never had that "luxury". We've had to maintain skepticism that a variable defined as a `Number` on line 14 would still be holding a `Number`, instead of a `String` on line 46.
 
