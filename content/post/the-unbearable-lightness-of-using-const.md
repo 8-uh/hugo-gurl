@@ -77,7 +77,7 @@ What the compiler does is grab an unused cell from the stack and shove the value
 | 5 | • | • | • | • | • | • |
 
 
-When line 2 runs, the program knows to look in memory at the location `B:2` to find the value of **n** and then display it to the screen. But what happens if the value of `n` changes?
+When line 2 runs, the program knows to look in memory at the location `A:0` to find the value of **n** and then display it to the screen. But what happens if the value of `n` changes?
 
 ```C
 int n = 42;
