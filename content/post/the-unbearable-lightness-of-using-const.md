@@ -3,10 +3,11 @@ categories = ["javascript","articles"]
 date = "2017-05-02T02:43:06-05:00"
 tags = ["javascript","es6",""]
 title = "The Unbearable Lightness of Using `const`"
-description = "These consistent cancerous and confusing cockups concerning `const` can conservatively be canceled via the coaxing of a code cacique"
+description = "The inner-workings of how javascript's memory management treats different data types and `const` effects upon it "
 +++
 
-It has recently come to my attention that there is some confusion in the javascript community as to the usage of `const`. If you'll allow me a few minutes and artistic license to butcher the -actual- underpinnings of memory management and registration in the V8 engine, I'll try to unravel, in as clear and plain language as possible, the mysteries of one of our newest keywords.
+It has recently come to my attention that there is some confusion in the javascript community as to the usage of `const`. If you'll allow me a few minutes and artistic license to butcher the -actual- underpinnings of memory management and registration in the V8 engine, I'll attempt to explain how `const` operates at the lowest-level possible. But know now, If you're looking for a simple answer regarding when to use `const`, well, buddy, this isn't the article for you. However, if you're curious as to how javascript handles data types and memory allocation, then, to quote my good friend Deckard Cain: "Stay awhile... and listen!"
+
 
 ## Ada's Rule
 
@@ -374,7 +375,7 @@ Using `const` you can help self-document your code by setting forward the **inte
 #### *Update 05.02.17 @ 11:17:*
 *I posted this article on reddit and received an [incredible comment from /u/Retsam19](https://www.reddit.com/r/javascript/comments/68t71q/the_unbearable_lightness_of_using_const/dh15kp6/). The conversation caused me to look back at some of my recent code as well as that of community leaders writing modern js and ultimately realize that combination of murky writing and "brain faster than fingers" led to a combination of poor communication of ideas on my part, and down right ignoring others. The edit below incorporates Retsam19's suggestions and my rework of the text*
 
- This is more a question of stylistics than of proper code authoring. Because of this, everyone will have a differing opinion. However, the most common modern JavaScript linter,`eslint`, has a rule (`prefer-const`) that will attempt to enforce the usage of `const` over `var` or `let`. My personal feeling on the matter, though, is: Use `const` everywhere that you can and that it makes since to; allow the usage of `let` to signify that a variable defined as such will -absolutely- change; use `const` to help manage side-effects (we'll talk about those later); use it in loops or iterator functions to hold a temporary variable. I also use it to deconstruct built-ins, create simple composable functions, or to store mathematic constants:
+ This is more a question of stylistics than of proper code authoring. Because of this, everyone will have a differing opinion. However, the most common modern JavaScript linter, `eslint`, has a rule (`prefer-const`) that will attempt to enforce the usage of `const` over `var` or `let`. My personal feeling on the matter, though, is: Use `const` everywhere that you can and that it makes since to; allow the usage of `let` to signify that a variable defined as such will -absolutely- change; use `const` to help manage side-effects (we'll talk about those later); use it in loops or iterator functions to hold a temporary variable. I also use it to deconstruct built-ins, create simple composable functions, or to store mathematic constants:
 
 ```javascript
 // deconstructions
