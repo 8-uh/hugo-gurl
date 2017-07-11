@@ -1,7 +1,7 @@
 +++
 date = "2017-07-11T13:55:11-05:00"
-title = "But I Don't Wanna: An ES6 Primer for Those Resistant to Change"
-description = "An overview of what you really need to know about ES6"
+title = "But I Don't Wanna: Part 1"
+description = "An ES6 Primer for Those Resistant to Change"
 tags = ["es6","javascript"]
 categories = ["javascript","es6"]
 +++
