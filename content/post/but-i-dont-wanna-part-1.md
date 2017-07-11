@@ -2,7 +2,7 @@
 date = "2017-07-11T13:55:11-05:00"
 title = "But I Don't Wanna: An ES6 Primer for Those Resistant to Change"
 description = "An overview of what you really need to know about ES6"
-tags = ["x"]
+tags = ["es6","javascript"]
 categories = ["javascript","es6"]
 +++
 
@@ -89,8 +89,8 @@ If you glance back at your browser's console, you'll see that the output has cha
 That's the power of Babel, Browserify, and Budo working for you.
 
 Ten dollars says you're looking at the screen like:  
-![](https://media.giphy.com/media/Hj9FQuZZIBiXS/giphy.gif)  
-_"I don't see the difference."_
+![](https://media.giphy.com/media/Hj9FQuZZIBiXS/giphy.gif)
+*"I don't see the difference."*
 
 And, if you'll just hold your horses, I'll show you...  
 
