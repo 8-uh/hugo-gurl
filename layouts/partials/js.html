@@ -2,7 +2,9 @@
 <script src="{{ .Site.BaseURL }}js/clipboard.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/prism.js" data-manual></script>
 <script src="{{ .Site.BaseURL }}js/main.js"></script>
-
+<script type="text/javascript"
+ src="{{ .Site.BaseURL }}js/jsxgraphcore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_CHTML"></script>
 {{ range .Site.Params.customJS }}
 <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
 {{ end }}
@@ -23,5 +25,28 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    // Fix <code> tags after MathJax finishes running. This is a
+    // hack to overcome a shortcoming of Markdown. Discussion at
+    // https://github.com/mojombo/jekyll/issues/199
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
 {{ end }}

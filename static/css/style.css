@@ -373,8 +373,8 @@ em, i {
 #post-list h2 {
     font: normal 17px/1.5em FiraCode, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #4C5669;
-    opacity: 0.6;
-    max-width: 400px;
+    opacity: 0.75;
+    max-width: 100%;
     margin-top: 2px;
 }
 
@@ -468,8 +468,8 @@ thead th, th {
 }
 
 img {
-    width: 100%;
-    max-width: 100%;
+
+    max-width: 50vw;
     border-radius: 3px;
 }
 
@@ -973,3 +973,9 @@ footer .by-line {
   bottom: 1em;
   z-index: 100;
 }
+
+code.has-jax {font: inherit;
+              font-size: 100%;
+              background: inherit;
+              border: inherit;
+              color: #515151;}
