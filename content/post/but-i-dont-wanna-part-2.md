@@ -77,7 +77,7 @@ cube(square(x))
 
 Neat, right?
 
-1[](https://media.giphy.com/media/10hvUFWkQEmoCs/giphy.gif)
+![](https://media.giphy.com/media/10hvUFWkQEmoCs/giphy.gif)
 * ^----- You
 
 ### A History Lesson
