@@ -78,7 +78,7 @@ cube(square(x))
 Neat, right?
 
 ![](https://media.giphy.com/media/10hvUFWkQEmoCs/giphy.gif)
-* ^----- You
+*^----- You*
 
 ### A History Lesson
 In the 1930's, a mathematician named Alonzo Church, following in the footsteps of predecessors such as Plato, Aristotle, Euclid, Descartes, Newton, and Liebniz, was attempting to determine the philosophical basis of mathematics. This led to Church's introduction of a formal system of mathematical logic called `lambda calculus`. There's a lot that can be said on this topic, but I'm going to be exceptionally brief (while still insisting you read [Wikipedia::lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus) and know that it is an incredibly interesting topic that is core to not only the theory of mathematics, but also philosophy, linguistics, computer science and category theory). A simple example of a lambda calculus function might look like:
